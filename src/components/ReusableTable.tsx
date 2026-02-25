@@ -44,12 +44,12 @@ const ReusableTable: React.FC<GenericTableProps> = ({
   const getRowId = (row: any): string => row[keyField] || row.id || "";
 
   useEffect(() => {
-    console.log("agnet columns ", columns);
+    // console.log("agnet columns ", columns);
   }, [columns]);
 
   if (loading) {
     return (
-      <div className="overflow-x-auto max-h-[calc(100vh-350px)] overflow-y-auto">
+      <div className="overflow-x-auto max-h-[calc(100vh-450px)] overflow-y-auto">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gradient-to-r from-purple-100/80 to-indigo-100/80 backdrop-blur-sm border-b border-purple-200/50">
             <tr>
@@ -148,7 +148,7 @@ const ReusableTable: React.FC<GenericTableProps> = ({
 
   // Add this debug line
   if (col.key === 'actions') {
-    console.log('Actions column - row:', row, 'content:', content);
+    // console.log('Actions column - row:', row, 'content:', content);
   }
 
   return (
